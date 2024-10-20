@@ -245,4 +245,4 @@ Para cerrar el contenedor, se puede correr el comando ``docker-compose down`` de
 
 licencia GPLv3. [este enlace](https://www.gnu.org/licenses/quick-guide-gplv3.html)
 
-![footer](doc/logoFIUBA.pdf)
+![footer](doc/logoFIUBA.png)
