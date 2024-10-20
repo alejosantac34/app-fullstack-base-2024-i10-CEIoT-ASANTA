@@ -1,7 +1,14 @@
+<<<<<<< HEAD
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
  Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+=======
+GNU GENERAL PUBLIC LICENSE
+                       Version 3, 29 June 2007
+
+ Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+>>>>>>> cb4c5ea (Primera confirmación de mi proyecto)
  Everyone is permitted to copy and distribute verbatim copies
  of this license document, but changing it is not allowed.
 
@@ -618,6 +625,7 @@ an absolute waiver of all civil liability in connection with the
 Program, unless a warranty or assumption of liability accompanies a
 copy of the Program in return for a fee.
 
+<<<<<<< HEAD
                      END OF TERMS AND CONDITIONS
 
             How to Apply These Terms to Your New Programs
@@ -672,3 +680,6 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
+=======
+                     END OF TERMS AND CONDITIONS
+>>>>>>> cb4c5ea (Primera confirmación de mi proyecto)

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>    
+    <head>
+        <!--Importa las fuentes de google-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Importa materialize.css-->
+        <link type="text/css" rel="stylesheet" href="static/css/materialize.css"  media="screen,projection"/>
+        <!--Se indica al browser que el despligue esta optimizado para dispositivos-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <!-- Barra de navegación -->
+        <nav style="background-color:#258f04">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo" ><b>Control de dispositivos Smart Home</b></a>
+                </div>
+            </div>
+        </nav>	
+        <!-- Cuerpo de la pagina -->
+        <br>
+        <br>
+        <br>
+        <main>
+            <div class="container">
+                <div class="row">
+                    </div>
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <a class="waves-effect waves-light btn modal-trigger" href="#modal1" style="background-color:#258f04">AGREGAR DISPOSITIVOS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div id="devicesList" class="row">
+                </div>
+            </div>
+        </main>
+
+        <!-- Modal para agregar dispositivos -->
+        <div id="modal1" class="modal" style="max-width: 30%;background-color:#dcf0d6">
+            <div class="modal-content">
+                <h5>Agregar dispositivo</h5>
+                <p>Complete la información del nuevo dispositivo.</p>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="Cocina" id="add_name" type="text" class="validate">
+                                <label for="add_name">Nombre</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input placeholder="Luz de la cocina" id="add_description" type="text" class="validate">
+                                <label for="add_description">Descripción</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <p>Seleccione la función del dispositivo:</p>
+                                <select id="add_feature" class="browser-default">
+                                  <option value="" disabled selected>Funcionalidad</option>
+                                  <option value="0">On/Off</option>
+                                  <option value="1">Dimerizable</option>
+                                </select>
+                            </div>
+                            <div class="input-field col s12">
+                                <p>Seleccione el tipo de dispositivo:</p>
+                                <select id="add_appliance" class="browser-default">
+                                    <option value="" disabled selected>Tipo de dispositivo</option>
+                                    <option value="0">Lámpara</option>
+                                    <option value="1">Aire acondicionado</option>
+                                    <option value="2">Equipo de música</option>
+                                    <option value="3">Televisión</option>
+                                    <option value="4">Ventilador</option>
+                                    <option value="5">Enchufe</option>
+                                    <option value="6">Persiana</option>
+                                    <option value="7">S.Riego</option>
+                                    <option value="8">Robot Aspiradora</option>
+                                </select>                            
+                            </div>
+                        </div>
+                    </form>
+                  </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" id="add_dev" class="modal-close waves-effect waves-green btn-flat">Agregar</a>
+            </div>
+            
+            <style>
+            .modal-footer {
+              display: flex;
+              justify-content: center;
+            }
+            </style>
+        </div>
+
+        <!-- Modal para borrado de dispositivos-->
+        <div id="modal2" class="modal" style="width: 50%; background-color:#dcf0d6">
+            <div class="modal-content">
+                <h5>¿Está seguro que desea eliminar el dispositivo?</h5>
+                <p>¡El procedimiento de eliminar dispositivos es irreversible!.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-red btn-flat">Cancelar</a>
+                <a href="#!" id="eli_dev" class="modal-close waves-effect waves-green btn-flat">Confirmar</a>
+            </div>
+        </div>
+
+        <!-- Modal ṕara editar los dispositivos -->
+        <div id="modal3" class="modal" style="width: 30%; background-color:#dcf0d6">
+            <div class="modal-content">
+                <h5>Agregar dispositivo</h5>
+                <p>Complete los siguientes datos para agregarlo en la aplicación:</p>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="Cocina" id="mod_name" type="text" class="validate">
+                                <label for="mod_name">Nombre</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input placeholder="Luz principal de la cocina" id="mod_description" type="text" class="validate">
+                                <label for="mod_description">Descripción</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <p>Seleccione la funcionalidad del dispositivo:</p>
+                                <select id="mod_feature" class="browser-default">
+                                    <option value="" disabled selected>Funcionalidad</option>
+                                    <option value="0">On/Off</option>
+                                    <option value="1">Dimerizable</option>
+                                </select>
+                            </div>
+                            <div class="input-field col s12">
+                                <p>Seleccione el tipo de dispositivo:</p>
+                                <select id="mod_appliance" class="browser-default">
+                                    <option value="" disabled selected>Tipo de dispositivo</option>
+                                    <option value="0">Lámpara</option>
+                                    <option value="1">Aire acondicionado</option>
+                                    <option value="2">Equipo de música</option>
+                                    <option value="3">Televisión</option>
+                                    <option value="4">Ventilador</option>
+                                    <option value="5">Enchufe</option>
+                                    <option value="6">Persiana</option>
+                                    <option value="7">S.Riego</option>
+                                    <option value="8">Robot Aspiradora</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" id="mod_dev" class="modal-close waves-effect waves-green btn-flat">Editar</a>
+            </div>
+            <style>
+                .modal-footer {
+                  display: flex;
+                  justify-content: center;
+                }
+            </style>
+        </div>
+        
+        <!-- Pie de pagina -->
+        <footer class="page-footer" style="background-color:#258f04">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s6">
+                        <!--p class="white-text"><b>Control de dispositivos| Trabajo final</b><br> 
+                            Desarrollo de aplicaciones web | CEIoT<br> 
+                            © 2024 - Alejandro Santa Calderón </p-->
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- JavaScript optimizador de carga -->
+        <script type="text/javascript" src="static/js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/Main.js"></script>
+        <script type="text/javascript" src="js/MyFramework.js"></script>
+        <script type="text/javascript" src="js/ViewMainPage.js"></script>
+    </body>
+</html>
+
